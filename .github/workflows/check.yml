@@ -25,4 +25,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: dotnet-results-${{ matrix.dotnet-version }}
-        path: ${{ github.workspace }}\TES3Lib\bin\${{ matrix.configuration }}\net6.0\*
+        path: ${{ github.workspace }}/TES3Lib/bin/Debug/net6.0/*
