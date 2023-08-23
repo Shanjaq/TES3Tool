@@ -21,3 +21,8 @@ jobs:
       run: dotnet restore TES3Lib.sln
     - name: Build
       run: dotnet build TES3Lib.sln --no-restore
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: dotnet-results-${{ matrix.dotnet-version }}
+        path: ${{ github.workspace }}\TES3Lib\bin\${{ matrix.configuration }}\net6.0\*
